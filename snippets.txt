@@ -1,0 +1,1 @@
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('123', 'Chris', 'Wycoff', '2399 Alder St.', 'OR');
