@@ -9,3 +9,6 @@ Candidate, Voter, and vote tables.
 Zeke's update as of noon 11/22:
 Candidate and Voter tables filled in-- next is to populate
 Vote, Candidate Vote, and Measure Vote
+
+I have added a few example Votes that are all Measure Votes-- I am sometimes skipping voters in measure votes and each voter does not necessarily vote on all measures.
+Once the Votes for Measure Votes are done, I will move onto the Candidate Votes so we can properly keep track of which voters have voted for what (I am doing everything in order once for measures and again for candidates). Again, Voters won't necessarily vote for all positions, but it will be worth making sure they aren't voting twice for the same position or person.
