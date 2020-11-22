@@ -29,6 +29,35 @@ INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES
 INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('151', 'Polly', 'Pocket', '6767 Doll House Rd.', 'OR');
 INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('152', 'Raymond', 'Holt', '99 Brooklyn Ave.', 'OR');
 INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('153', 'Charlie', 'Horse', '45 Ouch St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('154', 'Mother', 'Goose', '22 Lullaby Ln.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('155', 'Peter', 'Piper', '99 Pepper Pkwy.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('156', 'Scooby', 'Doo', '1854 Mystery Rd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('157', 'Jiminy', 'Cricket', '2393 Pinnochio Ave.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('158', 'Sargent', 'Pepper', '45 Penny Ln.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('159', 'Colonel ', 'Mustard', '100 Study St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('160', 'Michael', 'Phelps', '500 Butterfly Blvd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('161', 'Serena', 'Williams', '45 Tennis Ct.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('162', 'Rebecca', 'Bunch', '801 E. Cameron St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('163', 'Ronald', 'Weasley', 'The Burrow', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('164', 'Jarjar', 'Binks', '1971 Gungan City Pl.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('165', 'Marie', 'Antoinette', '81 Baguette St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('166', 'Julius', 'Caesar', '1607 Salad Rd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('167', 'Princess', 'Buttercup', '1 Fireswamp Way', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('168', 'Wesley', 'Roberts', '1 Fireswamp Way', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('169', 'Miles', 'Morales', '581 Peter Pkwy.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('170', 'Joan', 'd\'Arc', '100 Saint St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('171', 'Jabba', 'd\'Hutt', '5 Slug Rd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('172', 'Bruce', 'Wayne', '60 Bat Cave Pl.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('173', 'Guy', 'Fieri', '450 Flavortown Ave.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('174', 'Artemis', 'Fowl', '1600 Holly St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('175', 'Juliet', 'Butler', '1600 Holly St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('176', 'Strawberry', 'Shortcake', '1831 Sweet St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('177', 'Alfred', 'Hitchcock', '1200 N. Northwest St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('178', 'Sebastian', 'Crab', '1010 Undersea Rd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('179', 'Po', 'Teletubby', '1 Sunny St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('180', 'Tooth', 'Fairy', '1754 E. Erbunny Pl.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('181', 'Mary', 'Poppins', '17 Cherry Tree Ln.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('182', 'Bob', 'Builder', '5 Fixit Dr.', 'OR');
 ----------------------------------------------------------
 
 
