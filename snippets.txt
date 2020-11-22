@@ -1,1 +1,74 @@
+----------------- Person INSERTs -------------------------
 INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('123', 'Chris', 'Wycoff', '2399 Alder St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('125', 'Jane', 'Doe', '999 Missing St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('126', 'Mickey', 'Mouse', '1535 Happy Ln.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('127', 'Eleanor', 'Rigby', '100 Lonely Pl.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('128', 'Xena', 'Warrior-Princess', '1630 Sword Blvd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('129', 'Marty', 'McFly', '9303 Lyon Dr.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('130', 'George', 'Foreman', '1818 Grill St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('131', 'John', 'Deere', '50 Tractor Ln.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('132', 'Muffin', 'Man', '1 Drury Ln.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('133', 'Chris', 'Kringle', '10 North Pole Pl.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('134', 'Big', 'Bird', '123 Sesame St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('135', 'Cookie', 'Monster', '123 Sesame St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('136', 'Betty', 'Crocker', '450 Oven Pkwy.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('137', 'Ben', 'Button', '321 sdrawkcaB St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('138', 'Thomas', 'Edison', '1297 Light Way', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('139', 'Toph', 'Beifong', '16 Earth Aly.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('140', 'Zuko', 'Firelord', '17 Fire Ln.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('141', 'Timmy', 'Turner', '1515 Magic Blvd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('142', 'Harry', 'Potter', '4 Privet Dr.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('143', 'Trix', 'Rabbit', '1 Silly Pl.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('144', 'Smokey', 'The-Bear', '911 Forest St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('145', 'Karen', 'Smith', '1237 Main St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('146', 'Perry', 'Platypus', '104 Summer St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('147', 'Bojack', 'Horseman', '16 Hollywoo Dr.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('148', 'Arya', 'Stark', 'Winterfell', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('149', 'Chatty', 'Kathy', '1111 Tea Blvd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('150', 'Buster', 'Ghost', '8886 Whoyagonnacall St.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('151', 'Polly', 'Pocket', '6767 Doll House Rd.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('152', 'Raymond', 'Holt', '99 Brooklyn Ave.', 'OR');
+INSERT INTO `mydb`.`Person` (`ssn`, `fname`, `lname`, `address`, `state`) VALUES ('153', 'Charlie', 'Horse', '45 Ouch St.', 'OR');
+----------------------------------------------------------
+
+
+----------------- Party INSERTs --------------------------
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('1', 'Birthday');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('2', 'Surprise');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('3', '3rd');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('4', 'Animal');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('5', 'Holiday');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('6', 'Favor');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('7', 'Hat');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('8', 'City');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('9', 'Balloon');
+INSERT INTO `mydb`.`Party` (`party_code`, `party_name`) VALUES ('10', 'Guest');
+----------------------------------------------------------
+
+
+----------------- Position INSERTs -----------------------
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('1', 'President', 'Head of the executive branch');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('2', 'Vice President', 'Right hand of the President');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('3', 'Secretary of State', 'Manages foreign affairs');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('4', 'County Commisioner', 'County administrator, manages local affairs');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('5', 'State Senator', 'Member of the state Senate');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('6', 'State Representative', 'Member of the state House');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('7', 'U.S Senator', 'Member of the U.S. Senate');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('8', 'U.S Representative', 'Member of the U.S House');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('9', 'Federal Judge', 'Member of the Judiciary');
+INSERT INTO `mydb`.`Position` (`pos_id`, `pos_name`, `description`) VALUES ('10', 'Mayor', 'City administrator');
+----------------------------------------------------------
+
+
+----------------- Measure INSERTs ------------------------
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1060', 'Ban pineapple on pizza');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1061', 'Fine drivers who don\'t use turn signals');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1062', 'Make the goose new national bird');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1063', 'Ban skateboarding');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1064', 'Fine people who talk with their mouth full');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1065', 'Ban dark chocolate, white chocolate');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1066', 'Classify hot dogs as sandwich');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1067', 'Implement national swear jar to fund schools');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1068', 'Extend elementary school recess');
+INSERT INTO `mydb`.`Measure` (`measure_id`, `measure_desc`) VALUES ('1069', 'Declassify golf as a sport');
+----------------------------------------------------------
