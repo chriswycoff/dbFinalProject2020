@@ -12,3 +12,6 @@ Vote, Candidate Vote, and Measure Vote
 
 I have added a few example Votes that are all Measure Votes-- I am sometimes skipping voters in measure votes and each voter does not necessarily vote on all measures.
 Once the Votes for Measure Votes are done, I will move onto the Candidate Votes so we can properly keep track of which voters have voted for what (I am doing everything in order once for measures and again for candidates). Again, Voters won't necessarily vote for all positions, but it will be worth making sure they aren't voting twice for the same position or person.
+
+Zeke's update as of 3:30pm 11/22:
+Measure Votes and related Votes done. Need to add Candidate Votes and related Votes.
