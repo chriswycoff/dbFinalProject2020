@@ -15,3 +15,6 @@ Once the Votes for Measure Votes are done, I will move onto the Candidate Votes 
 
 Zeke's update as of 3:30pm 11/22:
 Measure Votes and related Votes done. Need to add Candidate Votes and related Votes.
+
+Zeke's update as of 5:30pm 11/23:
+Should be done entering data. There are no voters who voted for the same measure or position twice, but most voters did not vote for every measure or every position.
