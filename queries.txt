@@ -1,0 +1,8 @@
+Currently working on queries to later adapt to the PHP pages that will be
+displaying the info:
+
+
+Query 1: Select the winner of each position (work in progress)
+SELECT cv.Candidate_Person_ssn, COUNT(*)
+FROM Vote v JOIN CandidateVote cv ON v.vote_id=cv.Vote_vote_id
+GROUP BY cv.Candidate_Person_ssn
