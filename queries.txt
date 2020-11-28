@@ -2,7 +2,23 @@ Currently working on queries to later adapt to the PHP pages that will be
 displaying the info:
 
 
-Query 1: Select the winner of each position (work in progress)
-SELECT cv.Candidate_Person_ssn, COUNT(*)
-FROM Vote v JOIN CandidateVote cv ON v.vote_id=cv.Vote_vote_id
-GROUP BY cv.Candidate_Person_ssn
+Query 1: Select the outcome of each position (query by position name)
+--------------------------------------------------------------------
+SELECT CONCAT(x.fname, ' ', x.lname) AS fullname, x.pos_name, x.votes
+FROM (SELECT p.fname, p.lname, pos.pos_name, COUNT(*) AS votes
+      FROM CandidateVote cv JOIN Candidate c ON c.Person_ssn=cv.Candidate_Person_ssn
+                      JOIN Person p ON cv.Candidate_Person_ssn=p.ssn
+                      JOIN Position pos ON pos.pos_id=c.Position_pos_id
+      GROUP BY cv.Candidate_Person_ssn) x
+WHERE x.pos_name='President'
+ORDER BY x.votes DESC
+
+
+Query 2: Select the outcome for each measure (query by measure id) -- WIP
+--------------------------------------------------------------------
+SELECT x.measure_id, x.yes_no, COUNT(*) as votes
+FROM (SELECT m.measure_desc, m.measure_id, mv.yes_no
+      FROM MeasureVote mv JOIN Measure m ON mv.Measure_measure_id=m.measure_id
+      WHERE mv.Measure_measure_id=1061) x
+GROUP BY x.yes_no
+ORDER BY votes DESC

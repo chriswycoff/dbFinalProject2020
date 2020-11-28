@@ -599,3 +599,6 @@ RENAME TO  `mydb`.`CandidateVote` ;
 
 ALTER TABLE `mydb`.`Measure Vote`
 RENAME TO  `mydb`.`MeasureVote` ;
+
+ALTER TABLE `mydb`.`MeasureVote`
+CHANGE COLUMN `yes/no` `yes_no` VARCHAR(45) NULL ;

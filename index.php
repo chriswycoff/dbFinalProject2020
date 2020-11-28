@@ -42,9 +42,9 @@ echo     '<thead>
 $result->free();
 }
 
-// echo "<script>$(document).ready( function () {
+//echo "<script>$(document).ready( function () {
 //     $('#myTable').DataTable();
-// } );</script>";
+//} );</script>";
 // for some reason buggy? ^^^^ 
 
 
