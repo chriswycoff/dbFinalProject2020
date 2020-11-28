@@ -593,3 +593,9 @@ INSERT INTO `mydb`.`Candidate Vote` (`Vote_vote_id`, `Candidate_Person_ssn`) VAL
 INSERT INTO `mydb`.`Candidate Vote` (`Vote_vote_id`, `Candidate_Person_ssn`) VALUES ('205', '123');
 INSERT INTO `mydb`.`Candidate Vote` (`Vote_vote_id`, `Candidate_Person_ssn`) VALUES ('206', '125');
 ----------------------------------------------------------
+
+ALTER TABLE `mydb`.`Candidate Vote`
+RENAME TO  `mydb`.`CandidateVote` ;
+
+ALTER TABLE `mydb`.`Measure Vote`
+RENAME TO  `mydb`.`MeasureVote` ;
