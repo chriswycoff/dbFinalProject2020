@@ -9,6 +9,19 @@ $database = "mydb";
 $mysqli = new mysqli("ix.cs.uoregon.edu:3966", $username, $password, $database);
 
 $query = "SELECT * FROM Candidate";
+
+$result = $mysqli->query($query);
+
+$data = array();
+
+while($row = $result->fetch_assoc() )
+{
+    foreach($row as $key => $value) {
+        $data[$row['id']][$key] = $value;
+    }
+}
+print_r($data);
+
 echo "<b> <center>Database Output</center> </b> <br> <br>";
 
 if ($result = $mysqli->query($query)) {

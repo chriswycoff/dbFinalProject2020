@@ -23,6 +23,7 @@ What would you like to see?
   <option value="Vote">Voter</option>
 </select>
 </p> -->
+<form method="post" action = "/displayResult.php" name = "myForm">
 <select name="fromQuery">
 <option value="">Select...</option>
 <?php
@@ -39,7 +40,10 @@ foreach($listdbtables as $value){
 }
 
 ?>
+
 </select>
+<input type = "submit" value = "Submit" />
+</form>
 
 
 		</div>

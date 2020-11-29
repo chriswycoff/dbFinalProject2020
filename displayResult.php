@@ -9,11 +9,13 @@
 		</style>
 	</head>
 	<body>
+  
 	<div class="container">
 		<table id="contact-detail" class="display nowrap" cellspacing="0" width="100%">
 		<thead>
             <?php 
-            
+            $table = $_POST["fromQuery"];
+            echo "hi". $table;
             include("connection.php");
             // $sql = "SHOW COLUMNS FROM Measure";
             // $result = mysqli_query($connection,$sql);
