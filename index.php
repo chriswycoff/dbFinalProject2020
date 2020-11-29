@@ -12,11 +12,20 @@
 	<div class="container">
 		<table id="contact-detail" class="display nowrap" cellspacing="0" width="100%">
 		<thead>
-			<tr>
+            <?php 
+            include("connection.php");
+            // $sql = "SHOW COLUMNS FROM Measure";
+            // $result = mysqli_query($connection,$sql);
+            // while($row = mysqli_fetch_array($result)){
+            //     echo $row['Field']."<br>";
+            // }
+            //  proof of concept above
+			echo '<tr>
 			<th>SSN</th>
 			<th>Party Code</th>
 			<th>Position</th>
-			</tr>
+            </tr>';
+            ?>
 		</thead>
 		</table>
 		</div>

@@ -1,4 +1,12 @@
 <?php
+
+$sql_details = array(
+    'user' => 'chris',
+    'pass' => 'P@ssword',
+    'db'   => 'mydb',
+    'host' => 'ix.cs.uoregon.edu:3966'
+);
+
 $table = 'Candidate';
  
 $primaryKey = 'Person_ssn';
@@ -11,12 +19,6 @@ $columns = array(
    
 );
  
-$sql_details = array(
-    'user' => 'chris',
-    'pass' => 'P@ssword',
-    'db'   => 'mydb',
-    'host' => 'ix.cs.uoregon.edu:3966'
-);
  
  
 require( 'ssp.class.php' );
