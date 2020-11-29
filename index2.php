@@ -10,48 +10,46 @@ $mysqli = new mysqli("ix.cs.uoregon.edu:3966", $username, $password, $database);
 
 $query = "SELECT * FROM Candidate";
 
-$result = $mysqli->query($query);
+$query2 = "DESCRIBE Candidate";
 
-$data = array();
+$result2 = $mysqli->query($query2);
 
-while($row = $result->fetch_assoc() )
-{
-    foreach($row as $key => $value) {
-        $data[$row['id']][$key] = $value;
-    }
+while($row = $result2->fetch_assoc()){
+    $columns[] = $row['Field'];
 }
-print_r($data);
+
+foreach ($columns as $key => $value){
+    echo $value . '<br>';}
 
 echo "<b> <center>Database Output</center> </b> <br> <br>";
 
-if ($result = $mysqli->query($query)) {
-    echo '<table id="myTable" class="display">';
-echo     '<thead>
-<tr>
-    <th>'.'Person_ssn'.'</th>
-    <th>'.'Party_party_code'.'</th>
-    <th>'.'Position_pos_id'.'</th>
-</tr>
-</thead>';
+// if ($result = $mysqli->query($query)) {
+//     echo '<table id="myTable" class="display">';
+// echo     '<thead>
+// <tr>
+//     <th>'.'Person_ssn'.'</th>
+//     <th>'.'Party_party_code'.'</th>
+//     <th>'.'Position_pos_id'.'</th>
+// </tr>
+// </thead>';
 
-    while ($row = $result->fetch_assoc()) {
-        $field1name = $row["Person_ssn"];
-        $field2name = $row["Party_party_code"];
-        $field3name = $row["Position_pos_id"];
+//     while ($row = $result->fetch_assoc()) {
+//         $field1name = $row["Person_ssn"];
+//         $field2name = $row["Party_party_code"];
+//         $field3name = $row["Position_pos_id"];
         
-    echo ' <tbody>
-        <tr>
-            <td>'.$field1name.'</td>
-            <td>'.$field2name.'</td>
-            <td>'.$field3name.'</td>
-        </tr>';
-    }
-    echo '</tbody>
-    </table>';
+//     echo ' <tbody>
+//         <tr>
+//             <td>'.$field1name.'</td>
+//             <td>'.$field2name.'</td>
+//             <td>'.$field3name.'</td>
+//         </tr>';
+//     }
+//     echo '</tbody>
+//     </table>';
 
 /*freeresultset*/
-$result->free();
-}
+// $result->free();
 
 // echo "<script>$(document).ready( function () {
 //     $('#myTable').DataTable();

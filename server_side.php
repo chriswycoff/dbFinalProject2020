@@ -8,15 +8,16 @@ $sql_details = array(
 );
 
 $table = 'Candidate';
-if ($_POST["hi"] == 2){
+// this is where modularity should go
+if ($_POST["table"] == "Candidate"){
 $primaryKey = 'Person_ssn';
-
     $columns = array(
         array( 'db' => 'Person_ssn', 'dt' => 0 ),
         array( 'db' => 'Party_party_code',  'dt' => 1 ),
         array( 'db' => 'Position_pos_id',   'dt' => 2 ),
     );
 }
+
 else{
 $columns = array(
     array( 'db' => 'Person_ssn', 'dt' => 0 ),
@@ -28,6 +29,6 @@ $columns = array(
 require('ssp.class.php');
  
 echo json_encode(
-    SSP::simple( $_POST, $sql_details, $table, $primaryKey, $columns )
+    SSP::simple( $_POST, $sql_details, $table, $primaryKey, $columns)
 );
 ?>

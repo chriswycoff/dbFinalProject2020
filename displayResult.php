@@ -9,26 +9,44 @@
 		</style>
 	</head>
 	<body>
-  
+    
 	<div class="container">
 		<table id="contact-detail" class="display nowrap" cellspacing="0" width="100%">
 		<thead>
             <?php 
+            
             $table = $_POST["fromQuery"];
-            echo "hi". $table;
+            $complexQuery = $_POST["complexQuery"];
+            $isComplex = 0;
+            if (empty($complexQuery)){
+                echo "non complex";
+            }
+            else{
+                $isComplex = 1;
+            }
+
+            echo '<h1>' . $table . 's' . '</h1>'; // displays table name
             include("connection.php");
+            $query2 = "DESCRIBE $table";
+
+        $result2 = $connection->query($query2);
+
+    while($row = $result2->fetch_assoc()){
+        $columns[] = $row['Field'];
+    }
+    echo '<tr>';
+foreach ($columns as $key => $value){
+    echo '<th>'.$value.'</th>'
+;}
+
+            echo '</tr>';
             // $sql = "SHOW COLUMNS FROM Measure";
             // $result = mysqli_query($connection,$sql);
             // while($row = mysqli_fetch_array($result)){
             //     echo $row['Field']."<br>";
             // }
             //  proof of concept above
-			echo '<tr>
-			<th>SSN</th>
-			<th>Party Code</th>
-			<th>Position</th>
-            </tr>';
-            ?>
+?>
 		</thead>
 		</table>
 		</div>
@@ -37,13 +55,17 @@
 
 
 <script>
+    let table = "<?php echo $table;?>"; // gets table
+    let isComplex = <?php echo $isComplex;?>;
 $(document).ready(function() {
     $('#contact-detail').dataTable({
 		"scrollX": true,
 		"pagingType": "numbers",
         "processing": true,
         "serverSide": true,
-        "ajax": {'type': 'POST',"url": "server_side.php", "data":{"hi": 2}}
+        "ajax": {'type': 'POST',"url": "server_side.php", "data" : {"table": table, "type": isComplex }}
     } );
 } );
+
 </script>
+<a href="index.php"> back</a>
