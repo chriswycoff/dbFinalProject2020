@@ -24,7 +24,6 @@
             else{
                 $isComplex = 1;
             }
-
             echo '<h1>' . $table . 's' . '</h1>'; // displays table name
             include("connection.php");
             $query2 = "DESCRIBE $table";
