@@ -1,3 +1,10 @@
+<?php
+            $table = $_POST["fromQuery"];
+            if (empty($table)){
+            header('location: http://localhost:8080/index.php');
+                die;
+            }
+?>
 <html>
 	<head>
 	<title>Result of Query!</title>
@@ -15,7 +22,6 @@
 		<thead>
             <?php 
             
-            $table = $_POST["fromQuery"];
             $complexQuery = $_POST["complexQuery"];
             $isComplex = 0;
             if (empty($complexQuery)){
