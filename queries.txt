@@ -14,7 +14,13 @@ WHERE x.pos_name='President'
 ORDER BY x.votes DESC
 
 
-Query 2: Select the vote totals for each measure (query by measure id) -- WIP
+      Possible supplemental for Query 1: Show all positions that candidates are running for
+      --------------------------------------------------------------------
+      SELECT p.pos_name, p.description
+      FROM Position p
+
+
+Query 2: Select the vote totals for each measure (query by measure id)
 --------------------------------------------------------------------
 SELECT x.measure_id, x.yes_no, COUNT(*) as votes
 FROM (SELECT m.measure_desc, m.measure_id, mv.yes_no
@@ -22,6 +28,12 @@ FROM (SELECT m.measure_desc, m.measure_id, mv.yes_no
       WHERE mv.Measure_measure_id=1061) x
 GROUP BY x.yes_no
 ORDER BY votes DESC
+
+
+      Possible supplemental for Query 2: Show all measures on the ballot
+      --------------------------------------------------------------------
+      SELECT *
+      FROM Measure m
 
 
 Query 3: Total votes for each party (displayed with party name)
@@ -48,3 +60,18 @@ Query 5: Find all voters who registered in a particular year (use text field, no
 SELECT CONCAT(p.fname, ' ', p.lname) AS fullname, CAST(v.reg_date AS Date) AS reg_date
 FROM Voter v JOIN Person p ON v.Person_ssn=p.ssn
 WHERE YEAR(v.reg_date)=2018
+
+
+Query 6: Show all voters of a particular party (query by party name)
+--------------------------------------------------------------------
+SELECT CONCAT(p.fname, ' ', p.lname) AS fullname, pa.party_name, CAST(v.reg_date AS Date) AS reg_date
+FROM Voter v JOIN Party pa ON v.Party_party_code=pa.party_code
+			 JOIN Person p ON v.Person_ssn=p.ssn
+WHERE pa.party_name LIKE 'Birthday'
+
+
+      Possible supplemental for Query 6: Show all party names
+      --------------------------------------------------------------------
+      SELECT p.party_name
+      FROM Party p
+      ORDER BY p.party_name ASC
