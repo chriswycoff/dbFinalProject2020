@@ -2,7 +2,7 @@ Currently working on queries to later adapt to the PHP pages that will be
 displaying the info:
 
 
-Query 1: Select the outcome of each position (query by position name)
+Query 1: Select the vote totals for each position (query by position name)
 --------------------------------------------------------------------
 SELECT CONCAT(x.fname, ' ', x.lname) AS fullname, x.pos_name, x.votes
 FROM (SELECT p.fname, p.lname, pos.pos_name, COUNT(*) AS votes
@@ -14,7 +14,7 @@ WHERE x.pos_name='President'
 ORDER BY x.votes DESC
 
 
-Query 2: Select the outcome for each measure (query by measure id) -- WIP
+Query 2: Select the vote totals for each measure (query by measure id) -- WIP
 --------------------------------------------------------------------
 SELECT x.measure_id, x.yes_no, COUNT(*) as votes
 FROM (SELECT m.measure_desc, m.measure_id, mv.yes_no
@@ -22,3 +22,29 @@ FROM (SELECT m.measure_desc, m.measure_id, mv.yes_no
       WHERE mv.Measure_measure_id=1061) x
 GROUP BY x.yes_no
 ORDER BY votes DESC
+
+
+Query 3: Total votes for each party (displayed with party name)
+--------------------------------------------------------------------
+SELECT p.party_name, COUNT(*)
+FROM CandidateVote cv JOIN Candidate c ON cv.Candidate_Person_ssn=c.Person_ssn
+					  JOIN Party p ON c.Party_party_code=p.party_code
+GROUP BY p.party_name
+
+
+------------- 3 and 4 are similar outputs ---------------
+
+
+Query 4: Percentage of total votes by party (displayed with party name)
+--------------------------------------------------------------------
+SELECT p.party_name, ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM CandidateVote), 2) AS Popular_vote_percentage
+FROM CandidateVote cv JOIN Candidate c ON cv.Candidate_Person_ssn=c.Person_ssn
+					  JOIN Party p ON c.Party_party_code=p.party_code
+GROUP BY p.party_name
+
+
+Query 5: Find all voters who registered in a particular year (use text field, not dropdown)
+--------------------------------------------------------------------
+SELECT CONCAT(p.fname, ' ', p.lname) AS fullname, CAST(v.reg_date AS Date) AS reg_date
+FROM Voter v JOIN Person p ON v.Person_ssn=p.ssn
+WHERE YEAR(v.reg_date)=2018
