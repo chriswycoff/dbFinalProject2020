@@ -13,6 +13,7 @@
 		<table id="contact-detail" class="display nowrap" cellspacing="0" width="100%">
 		<thead>
             <?php 
+            
             include("connection.php");
             // $sql = "SHOW COLUMNS FROM Measure";
             // $result = mysqli_query($connection,$sql);
@@ -39,7 +40,7 @@ $(document).ready(function() {
 		"pagingType": "numbers",
         "processing": true,
         "serverSide": true,
-        "ajax": "server_side.php"
+        "ajax": {'type': 'POST',"url": "server_side.php", "data":{"hi": 2}}
     } );
 } );
 </script>
