@@ -8,9 +8,9 @@ $sql_details = array(
 );
 
 $table = 'Candidate';
-
-$primaryKey = 'Person_ssn';
 if ($_POST["hi"] == 2){
+$primaryKey = 'Person_ssn';
+
     $columns = array(
         array( 'db' => 'Person_ssn', 'dt' => 0 ),
         array( 'db' => 'Party_party_code',  'dt' => 1 ),
