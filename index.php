@@ -44,11 +44,19 @@ foreach($listdbtables as $value){
 </select>
 <input type = "submit" value = "Submit" />
 </form>
-
-
 		</div>
 	</body>
 </html>
+
+<form method="post" action = "/presidentVote.php" name = "myForm2">
+<input type="hidden" value="fromQuery" name="Candidate"/>
+<input type = "submit" value = "Who Won the Presidency?" />
+</form>
+
+<form method="post" action = "/measureVote.php" name = "myForm2">
+<input type="hidden" value="fromQuery" name="Candidate"/>
+<input type = "submit" value = "Measure" />
+</form>
 
 
 <!-- <script>
