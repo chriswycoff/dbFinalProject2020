@@ -3,18 +3,16 @@ echo '<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquer
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" type="text/javascript"></script>';
 
-$measureNum = $_POST['measureNum'];
+$registrationYear = $_POST['registrationYear'];
 
-$query = "SELECT x.measure_id, x.yes_no, COUNT(*) as votes
-FROM (SELECT m.measure_desc, m.measure_id, mv.yes_no
-      FROM MeasureVote mv JOIN Measure m ON mv.Measure_measure_id=m.measure_id
-      WHERE mv.Measure_measure_id=$measureNum) x
-GROUP BY x.yes_no
-ORDER BY votes DESC" ;
+$query = "SELECT CONCAT(p.fname, ' ', p.lname) AS fullname, CAST(v.reg_date AS Date) AS reg_date
+FROM Voter v JOIN Person p ON v.Person_ssn=p.ssn
+WHERE YEAR(v.reg_date)=$registrationYear" ;
 
+echo "hi";
 include("connection.php");
 
-$result2 = $connection->query($query);
+// $result2 = $connection->query($query);
 
 // while($row = $result2->fetch_assoc()){
 //     $columns[] = $row['Field'];
@@ -24,27 +22,25 @@ $result2 = $connection->query($query);
 //     echo $value . '<br>';
 // }
 
-echo "<b> <center>Did Measure $measureNum Pass?</center> </b> <br> <br>";
+echo "<b> <center>Voters for the $partyName Party?</center> </b> <br> <br>";
 
 if ($result = $connection->query($query)) {
+    echo "hello";
     echo '<table id="myTable" class="display">';
 echo     '<thead>
 <tr>
-    <th>'.'measure_id'.'</th>
-    <th>'.'yes_no'.'</th>
-    <th>'.'votes'.'</th>
+    <th>'.'Name'.'</th>
+    <th>'.'Date Registered'.'</th>
 </tr>
 </thead>';
 echo ' <tbody>';
     while ($row = $result->fetch_assoc()) {
-        $field1name = $row["measure_id"];
-        $field2name = $row["yes_no"];
-        $field3name = $row["votes"];
+        $field1name = $row["fullname"];
+        $field2name = $row["reg_date"];
         echo '
         <tr>
             <td>'.$field1name.'</td>
             <td>'.$field2name.'</td>
-            <td>'.$field3name.'</td>
         </tr>';
     }
 
@@ -59,6 +55,6 @@ $result->free();
 
 <script>
 $(document).ready(function() {
-    $('#myTable').DataTable({"order": [[ 2, "desc" ]]});
+    $('#myTable').DataTable({"order": [[ 1, "desc" ]]});
 } );
 </script>

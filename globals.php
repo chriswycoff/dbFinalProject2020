@@ -1,6 +1,6 @@
 <?php
 
-$development = false;
+$development = true;
 
 if ($development == false){
     $directory_path = "/~cwycoff/databases_class/dbFinalProject2020/";

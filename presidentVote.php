@@ -17,13 +17,13 @@ include("connection.php");
 
 $result2 = $connection->query($query);
 
-while($row = $result2->fetch_assoc()){
-    $columns[] = $row['Field'];
-}
+// while($row = $result2->fetch_assoc()){
+//     $columns[] = $row['Field'];
+// }
 
-foreach ($columns as $key => $value){
-    echo $value . '<br>';
-}
+// foreach ($columns as $key => $value){
+//     echo $value . '<br>';
+// }
 
 echo "<b> <center>Who Won the Presidency?</center> </b> <br> <br>";
 
@@ -55,7 +55,7 @@ $result->free();
 }
 ?>
 
-<a href="index.php"> back</a>
+<a href="<?php echo $directory_path?>index.php"> back</a>
 
 <script>
 $(document).ready(function() {
