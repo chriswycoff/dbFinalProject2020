@@ -16,8 +16,8 @@ include("globals.php");
         Welcome
         <br>
         <p>
-Which database table would you like to see?
-</p>
+					Display a given table from the database
+				</p>
 <!-- <select name="fromQuery">
   <option value="">Select...</option>
   <option value="Candidate">Candidates</option>
@@ -110,7 +110,7 @@ foreach($listdbtables as $value){
 <!-- Start Total Votes for Each Party -->
 <br>
 <p>
-Overall vote totals by party
+Display the vote totals (and percentage of the total vote) by party
 </p>
 <form method="post" action = "<?php echo $directory_path?>/partyVote.php" name = "partyVoteForm">
 
@@ -122,7 +122,7 @@ Overall vote totals by party
 <!-- Start all voters registered certain year -->
 <br>
 <p>
-See all voters registered in a given year
+Display all voters registered in a given year
 </p>
 
 <form method="post" action = "<?php echo $directory_path?>/votersRegisteredInYear.php" name = "votersRegisterdInYear">
@@ -152,7 +152,7 @@ foreach($listdbtables as $value){
 <!-- Start all voters for a certain party -->
 <br>
 <p>
-See all voters registered with a given party
+Display all voters registered with a given party
 </p>
 <form method="post" action = "<?php echo $directory_path?>/votersForParty.php" name = "voterForPartyForm">
 <select name="partyName">

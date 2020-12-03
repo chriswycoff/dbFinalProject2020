@@ -8,20 +8,17 @@
 <html>
 	<head>
 	<title>Result of Query!</title>
-		<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">	
+		<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
-		<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" type="text/javascript"></script> 	
-		<style>
-		body {font-family: calibri;color:#4e7480;}
-		</style>
+		<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" type="text/javascript"></script>
 	</head>
 	<body>
-    
+
 	<div class="container">
 		<table id="contact-detail" class="display nowrap" cellspacing="0" width="100%">
 		<thead>
-            <?php 
-            
+            <?php
+
             $complexQuery = $_POST["complexQuery"];
             $isComplex = 0;
             // if (empty($complexQuery)){
@@ -30,7 +27,8 @@
             // else{
             //     $isComplex = 1;
             // }
-            echo '<h1>' . $table . 's' . '</h1>'; // displays table name
+            echo "<b> <center>$table</center> </b> <br> <br>";
+            //echo '<h1>' . $table . 's' . '</h1>'; // displays table name
             include("connection.php");
             $query2 = "DESCRIBE $table";
 

@@ -22,7 +22,7 @@ include("connection.php");
 //     echo $value . '<br>';
 // }
 
-echo "<b> <center>Voters for the $partyName Party?</center> </b> <br> <br>";
+echo "<b> <center>Voters registered with the $partyName Party</center> </b> <br> <br>";
 
 if ($result = $connection->query($query)) {
 

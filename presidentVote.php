@@ -1,6 +1,6 @@
 
 <?php
-echo '<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">	
+echo '<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" type="text/javascript"></script>';
 
@@ -27,7 +27,7 @@ $result2 = $connection->query($query);
 //     echo $value . '<br>';
 // }
 
-echo "<b> <center>Who Won the $queryPosition race?</center> </b> <br> <br>";
+echo "<b> <center>Who won the race for $queryPosition?</center> </b> <br> <br>";
 
 if ($result = $connection->query($query)) {
     echo '<table id="myTable" class="display">';
