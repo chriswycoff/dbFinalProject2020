@@ -59,7 +59,7 @@ Display the results of a given election
 </p>
 <form method="post" action = "<?php echo $directory_path?>/presidentVote.php" name = "presidentForm">
 <input type="hidden" value="fromQuery" name="Candidate"/>
-<input type = "submit" value = "Who Won the Presidency?" />
+<input type = "submit" value = "Submit" />
 </form>
 
 
@@ -87,7 +87,7 @@ foreach($listdbtables as $value){
 }
 ?>
 </select>
-<input type = "submit" value = "See Result of Measure" />
+<input type = "submit" value = "Submit" />
 </form>
 
 <!-- End Measures  -->
@@ -99,7 +99,7 @@ Overall vote totals by party
 </p>
 <form method="post" action = "<?php echo $directory_path?>/partyVote.php" name = "partyVoteForm">
 
-<input type = "submit" value = "Vote totals by party" />
+<input type = "submit" value = "Submit" />
 </form>
 
 <!-- End total votes for each party -->
@@ -128,7 +128,7 @@ foreach($listdbtables as $value){
 }
 ?>
 </select>
-<input type = "submit" value = "See all voters registered in a given year" />
+<input type = "submit" value = "Submit" />
 </form>
 
 <!-- End all voters registered certain year -->
@@ -156,7 +156,7 @@ foreach($listdbtables as $value){
 }
 ?>
 </select>
-<input type = "submit" value = "See all voters registered with a given party" />
+<input type = "submit" value = "Submit" />
 </form>
 
 <!-- End all voters for a certain party -->
