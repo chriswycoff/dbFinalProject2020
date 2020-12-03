@@ -73,4 +73,4 @@ $(document).ready(function() {
 } );
 
 </script>
-<a href="index.php"> back</a>
+<a href="<?php echo $directory_path?>index.php"> back</a>

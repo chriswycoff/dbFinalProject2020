@@ -1,3 +1,6 @@
+<?php 
+include("globals.php");
+?>
 <html>
 	<head>
 	<title>Voter Console</title>
@@ -13,7 +16,7 @@
         Welcome
         <br>
         <p>
-What would you like to see?
+Which would you like to see?
 <!-- <select name="fromQuery">
   <option value="">Select...</option>
   <option value="Candidate">Candidates</option>
@@ -23,7 +26,7 @@ What would you like to see?
   <option value="Vote">Voter</option>
 </select>
 </p> -->
-<form method="post" action = "/displayResult.php" name = "myForm">
+<form method="post" action = "<?php echo $directory_path?>/displayResult.php" name = "myForm">
 <select name="fromQuery">
 <option value="">Select...</option>
 <?php
@@ -48,12 +51,12 @@ foreach($listdbtables as $value){
 	</body>
 </html>
 
-<form method="post" action = "/presidentVote.php" name = "myForm2">
+<form method="post" action = "<?php echo $directory_path?>/presidentVote.php" name = "myForm2">
 <input type="hidden" value="fromQuery" name="Candidate"/>
 <input type = "submit" value = "Who Won the Presidency?" />
 </form>
 
-<form method="post" action = "/measureVote.php" name = "myForm2">
+<form method="post" action = "<?php echo $directory_path?>/measureVote.php" name = "myForm2">
 <input type="hidden" value="fromQuery" name="Candidate"/>
 <input type = "submit" value = "Measure" />
 </form>
