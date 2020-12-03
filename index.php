@@ -58,7 +58,22 @@ foreach($listdbtables as $value){
 Display the results of a given election
 </p>
 <form method="post" action = "<?php echo $directory_path?>/presidentVote.php" name = "presidentForm">
-<input type="hidden" value="fromQuery" name="Candidate"/>
+<input type="hidden" value="fromQuery" name="fromQuery"/>
+<select name="queryPosition">
+<?php
+
+$tableQuery = "SELECT pos_name FROM Position;";
+
+$result = $connection->query($tableQuery);
+
+$listdbtables = array_column(mysqli_fetch_all($result),0);
+
+foreach($listdbtables as $value){
+    echo '<option value="'.$value.'">'.$value.'</option>';
+}
+?>
+
+
 <input type = "submit" value = "Submit" />
 </form>
 
@@ -132,7 +147,6 @@ foreach($listdbtables as $value){
 </form>
 
 <!-- End all voters registered certain year -->
-
 
 
 <!-- Start all voters for a certain party -->
