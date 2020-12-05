@@ -1,5 +1,5 @@
 <?php
-echo '<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">	
+echo '<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" type="text/javascript"></script>';
 
@@ -10,7 +10,6 @@ FROM Voter v JOIN Party pa ON v.Party_party_code=pa.party_code
 			 JOIN Person p ON v.Person_ssn=p.ssn
 WHERE pa.party_name LIKE '$partyName' " ;
 
-echo "hi";
 include("connection.php");
 
 // $result2 = $connection->query($query);
@@ -23,10 +22,10 @@ include("connection.php");
 //     echo $value . '<br>';
 // }
 
-echo "<b> <center>Voters for the $partyName Party?</center> </b> <br> <br>";
+echo "<b> <center>Voters registered with the $partyName Party</center> </b> <br> <br>";
 
 if ($result = $connection->query($query)) {
-    echo "hello";
+
     echo '<table id="myTable" class="display">';
 echo     '<thead>
 <tr>

@@ -1,8 +1,10 @@
 
 <?php
-echo '<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">	
+echo '<link rel="stylesheet"  href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" type="text/javascript"></script>';
+
+$queryPosition = $_POST['queryPosition'];
 
 $query = "SELECT CONCAT(x.fname, ' ', x.lname) AS fullname, x.pos_name, x.votes
 FROM (SELECT p.fname, p.lname, pos.pos_name, COUNT(*) AS votes
@@ -10,7 +12,7 @@ FROM (SELECT p.fname, p.lname, pos.pos_name, COUNT(*) AS votes
                       JOIN Person p ON cv.Candidate_Person_ssn=p.ssn
                       JOIN Position pos ON pos.pos_id=c.Position_pos_id
       GROUP BY cv.Candidate_Person_ssn) x
-WHERE x.pos_name='President'
+WHERE x.pos_name= '$queryPosition'
 ORDER BY x.votes DESC" ;
 
 include("connection.php");
@@ -25,7 +27,7 @@ $result2 = $connection->query($query);
 //     echo $value . '<br>';
 // }
 
-echo "<b> <center>Who Won the Presidency?</center> </b> <br> <br>";
+echo "<b> <center>Who won the race for $queryPosition?</center> </b> <br> <br>";
 
 if ($result = $connection->query($query)) {
     echo '<table id="myTable" class="display">';
@@ -59,6 +61,6 @@ $result->free();
 
 <script>
 $(document).ready(function() {
-    $('#myTable').DataTable();
+    $('#myTable').DataTable({"order": [[ 2, "desc" ]]});
 } );
 </script>
