@@ -190,6 +190,13 @@ foreach($listdbtables as $value){
 <a href="<?php echo $directory_path?>textFiles/votersForParty.txt" target="_blank"> Contents of this page</a>
 <hr>
 
+<p>Support Files</p>
+<a href="<?php echo $directory_path?>textFiles/globals.txt" target="_blank">Globals file</a>
+<a href="<?php echo $directory_path?>textFiles/connection.txt" target="_blank"> Connection File</a>
+<a href="<?php echo $directory_path?>textFiles/server_side.txt" target="_blank"> Data Table Processing</a>
+
+
+
 </div>
 	</body>
 </html>
