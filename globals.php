@@ -6,7 +6,7 @@ $zeke = true;
 
 if ($development == false){
     if ($zeke) {
-        "/~ezekielp/databases_class/dbFinalProject2020/";
+        $directory_path =  "/~ezekielp/databases_class/dbFinalProject2020/";
     }
     else{
         $directory_path = "/~cwycoff/databases_class/dbFinalProject2020/";
