@@ -1,8 +1,8 @@
 <?php
 
 $sql_details = array(
-    'user' => 'chris',
-    'pass' => 'P@ssword',
+    'user' => 'guest',
+    'pass' => 'guest',
     'db'   => 'mydb',
     'host' => 'ix.cs.uoregon.edu:3966'
 );
