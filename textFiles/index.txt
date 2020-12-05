@@ -17,8 +17,6 @@ include("globals.php");
 	<div class="container1">
         Welcome
         <br>
-        <hr>
-        <br>
         <p>
 					Display a given table from the database
 				</p>
@@ -33,7 +31,7 @@ include("globals.php");
 </p> -->
 <form method="post" action = "<?php echo $directory_path?>/displayResult.php" name = "myForm">
 
-<select name="fromQuery">
+<select name="fromQuery1">
 <!-- <option value="">Select...</option> -->
 <?php
 include("connection.php");
@@ -54,8 +52,9 @@ foreach($listdbtables as $value){
 
 <input type = "submit" value = "Submit" />
 </form>
-<a href="<?php echo $directory_path?>textFiles/displayResult.txt" target="_blank"> Contents of this page</a>
-<hr>
+		</div>
+	</body>
+</html>
 
 <!-- Start President  -->
 <br>
@@ -81,8 +80,7 @@ foreach($listdbtables as $value){
 
 <input type = "submit" value = "Submit" />
 </form>
-<a href="<?php echo $directory_path?>textFiles/presidentVote.txt" target="_blank"> Contents of this page</a>
-<hr>
+
 
 <!-- End President  -->
 
@@ -110,9 +108,6 @@ foreach($listdbtables as $value){
 </select>
 <input type = "submit" value = "Submit" />
 </form>
-<a href="<?php echo $directory_path?>textFiles/measureVote.txt" target="_blank"> Contents of this page</a>
-<hr>
-
 
 <!-- End Measures  -->
 
@@ -125,9 +120,6 @@ Display the vote totals (and percentage of the total vote) by party
 
 <input type = "submit" value = "Submit" />
 </form>
-<a href="<?php echo $directory_path?>textFiles/partyVote.txt" target="_blank"> Contents of this page</a>
-<hr>
-
 
 <!-- End total votes for each party -->
 
@@ -157,9 +149,6 @@ foreach($listdbtables as $value){
 </select>
 <input type = "submit" value = "Submit" />
 </form>
-<a href="<?php echo $directory_path?>textFiles/votersRegisteredInYear.txt" target="_blank"> Contents of this page</a>
-<hr>
-
 
 <!-- End all voters registered certain year -->
 
@@ -187,12 +176,6 @@ foreach($listdbtables as $value){
 </select>
 <input type = "submit" value = "Submit" />
 </form>
-<a href="<?php echo $directory_path?>textFiles/votersForParty.txt" target="_blank"> Contents of this page</a>
-<hr>
-
-</div>
-	</body>
-</html>
 
 <!-- End all voters for a certain party -->
 
