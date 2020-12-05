@@ -4,8 +4,7 @@ $development = false;
 $zeke = true;
 // add rules here and below to make it work on ~epeterson...
 
-if ($development){
-
+if ($development == false){
     if ($zeke) {
         "/~ezekielp/databases_class/dbFinalProject2020/";
     }
