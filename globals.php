@@ -1,7 +1,7 @@
 <?php
 
-$development = true;
-$zeke = false;
+$development = false;
+$zeke = true;
 // add rules here and below to make it work on ~epeterson...
 
 if ($development == false){
